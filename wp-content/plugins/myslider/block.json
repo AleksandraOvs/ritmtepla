@@ -1,0 +1,155 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "myslider/hero-slider",
+  "version": "2.0.0",
+  "title": "Hero Slider (MySlider v2)",
+  "category": "design",
+  "icon": "images-alt2",
+  "description": "Layer-based hero slider с независимыми Desktop/Mobile контентом и позициями.",
+  "supports": {
+    "align": ["full", "wide"],
+    "html": false
+  },
+  "textdomain": "myslider",
+  "attributes": {
+    "slides": {
+      "type": "array",
+      "default": [
+        {
+          "desktopImageId": 0,
+          "desktopImageUrl": "",
+          "mobileImageId": 0,
+          "mobileImageUrl": "",
+          "image": {
+            "desktop": { "fit": "cover", "posX": 50, "posY": 50, "zoom": 1 },
+            "mobile": { "fit": "cover", "posX": 50, "posY": 50, "zoom": 1 }
+          },
+          "elements": [
+            {
+              "id": "el_heading_1",
+              "type": "heading",
+              "name": "Заголовок",
+              "zIndex": 20,
+              "visibility": { "desktop": true, "mobile": true },
+              "positions": {
+                "desktop": { "x": 8, "y": 18 },
+                "mobile": { "x": 6, "y": 18 }
+              },
+              "contentDesktop": "Заголовок слайда",
+              "contentMobile": "Заголовок",
+              "url": "",
+              "iconId": 0,
+              "iconUrl": "",
+              "iconAlt": "",
+              "iconWidthDesktop": 56,
+              "iconWidthMobile": 42
+            },
+            {
+              "id": "el_text_1",
+              "type": "text",
+              "name": "Текст",
+              "zIndex": 20,
+              "visibility": { "desktop": true, "mobile": true },
+              "positions": {
+                "desktop": { "x": 8, "y": 33 },
+                "mobile": { "x": 6, "y": 34 }
+              },
+              "contentDesktop": "Подзаголовок для desktop-версии",
+              "contentMobile": "Подзаголовок для mobile",
+              "url": "",
+              "iconId": 0,
+              "iconUrl": "",
+              "iconAlt": "",
+              "iconWidthDesktop": 56,
+              "iconWidthMobile": 42
+            },
+            {
+              "id": "el_button_1",
+              "type": "button",
+              "name": "Кнопка",
+              "zIndex": 25,
+              "visibility": { "desktop": true, "mobile": true },
+              "positions": {
+                "desktop": { "x": 8, "y": 52 },
+                "mobile": { "x": 6, "y": 54 }
+              },
+              "contentDesktop": "Подробнее",
+              "contentMobile": "Подробнее",
+              "url": "#",
+              "iconId": 0,
+              "iconUrl": "",
+              "iconAlt": "",
+              "iconWidthDesktop": 56,
+              "iconWidthMobile": 42
+            }
+          ]
+        }
+      ]
+    },
+    "settings": {
+      "type": "object",
+      "default": {
+        "heightDesktopMode": "screen",
+        "heightDesktop": 700,
+        "heightMobileMode": "screen",
+        "heightMobile": 560,
+        "contentMaxWidth": 720,
+        "overlayOpacity": 20
+      }
+    },
+    "sliderSettings": {
+      "type": "object",
+      "default": {
+        "autoplay": true,
+        "delay": 5000,
+        "pauseOnHover": true,
+        "loop": true,
+        "arrows": true,
+        "dots": true,
+        "swipeMobile": true,
+        "dragDesktop": true,
+        "clickPausePlay": true
+      }
+    },
+    "removePositioning": {
+    "type": "boolean",
+    "default": false
+},
+    "styles": {
+      "type": "object",
+      "default": {
+        "button": {
+          "bg": "#ffffff",
+          "text": "#111111",
+          "fontSize": 16,
+          "paddingX": 18,
+          "paddingY": 10,
+          "radius": 8,
+          "hoverBg": "#f3f3f3",
+          "hoverText": "#111111"
+        },
+        "textBlock": {
+          "bg": "#000000",
+          "bgOpacity": 0,
+          "paddingX": 0,
+          "paddingY": 0,
+          "radius": 0,
+          "textColor": "#ffffff"
+        },
+        "badge": {
+          "bg": "#ff6a00",
+          "text": "#ffffff",
+          "fontSize": 13,
+          "paddingX": 10,
+          "paddingY": 6,
+          "radius": 999
+        }
+      }
+    }
+  },
+  "editorScript": "myslider-editor-script",
+  "editorStyle": "myslider-editor-style",
+  "style": "myslider-style",
+  "script": "myslider-frontend-script"
+}

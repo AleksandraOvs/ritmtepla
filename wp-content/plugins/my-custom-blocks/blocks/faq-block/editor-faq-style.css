@@ -1,0 +1,15 @@
+.faq-item-editor {
+    border-bottom: 1px solid #fff;
+    position: relative;
+}
+
+.faq-item-editor>div {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.faq-item-editor>div button {
+    color: #cacaca;
+    border: 1px solid #cacaca;
+}

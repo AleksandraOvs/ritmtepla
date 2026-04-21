@@ -1,0 +1,118 @@
+.products-slider .swiper-slide {
+    box-sizing: border-box;
+
+}
+
+.product-image {
+    display: block;
+    aspect-ratio: 3/2;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 25px;
+    background: #fff;
+}
+
+.product-image a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.product-image a img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.product-content h3 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.product-content h3:after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: var(--theme-color-secondary);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.product-content h3 a {
+    font-size: 16px;
+    font-weight: 400;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 40px;
+}
+
+.product-content .product-add-to-cart {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.product-content .product-add-to-cart .add-to-cart .add_to_cart_button {
+    padding: 10px;
+}
+
+
+
+/* Для больших экранов делаем сетку внутри слайдов */
+@media (min-width: 1024px) {
+    .products-slider .swiper-wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        /* 4 товара в ряд */
+        grid-auto-rows: auto;
+        row-gap: 50px;
+    }
+
+    .products-slider .swiper-slide {
+        width: auto;
+        /* чтобы сетка работала */
+    }
+}
+
+/* Меньше 1024px — один ряд товаров */
+@media (max-width: 1023px) {
+    .products-slider .swiper-wrapper {
+        display: flex;
+    }
+
+    .products-slider .swiper-slide {
+        width: calc(25% - 15px);
+        /* 4 товара в ряд */
+        margin-right: 20px;
+    }
+}
+
+/* Меньше 768px — 2 товара в ряд */
+@media (max-width: 768px) {
+    .swiper.products-slider {
+        overflow: visible;
+    }
+
+    .products-slider .swiper-slide {
+        width: calc(50% - 10px);
+    }
+}
+
+/* Меньше 480px — 1 товар в ряд */
+@media (max-width: 480px) {
+    .products-slider .swiper-slide {
+        width: 100%;
+        margin-right: 0;
+    }
+}

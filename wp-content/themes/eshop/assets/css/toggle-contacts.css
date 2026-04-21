@@ -1,0 +1,189 @@
+.toggle-contacts__bar {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+}
+
+.toggle-contacts-icon {
+    width: 70px;
+    height: 70px;
+    display: block;
+    background: var(--theme-color-accent);
+    padding: 15px;
+    border-radius: 100%;
+    transition: all .5s linear;
+    filter: drop-shadow(-2px -2px 5px rgba(233, 178, 16, 0.4)) drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.3));
+    box-shadow: inset 1px 1px 1px rgba(255, 255, 255, .7);
+}
+
+/* Общие стили для кругов */
+.toggle-contacts-icon::before,
+.toggle-contacts-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(255, 194, 26, .5);
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 0;
+    opacity: 0;
+}
+
+/* Первая волна */
+.toggle-contacts-icon::before {
+    animation: pulse-wave 2s infinite;
+}
+
+/* Вторая волна с задержкой */
+.toggle-contacts-icon::after {
+    animation: pulse-wave 5s infinite;
+    animation-delay: 3s;
+}
+
+/* Анимация */
+@keyframes pulse-wave {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.6;
+    }
+
+    70% {
+        transform: translate(-50%, -50%) scale(1.8);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(2);
+        opacity: 0;
+    }
+}
+
+/* Небольшой эффект нажатия */
+.toggle-contacts-icon:active {
+    transform: scale(0.95);
+}
+
+.toggle-contacts-icon svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    transform: rotate(5deg);
+    transition: all .5s linear;
+}
+
+.toggle-contacts-icon:hover svg {
+    transform: rotate(-7deg);
+}
+
+.toggle-contacts-icon:hover {
+    transform: scale(.8);
+    filter: none;
+    box-shadow: unset;
+}
+
+.toggle-contacts__list__item__link {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+
+.toggle-contacts__list__item__link span {
+    position: absolute;
+    width: max-content;
+    right: 120%;
+    top: 15px;
+    background: rgba(255, 255, 255, .75);
+    color: var(--theme-color-black);
+    border-radius: 3px;
+    text-align: right;
+    width: 1px;
+    overflow: hidden;
+    opacity: 0;
+    height: 1px;
+    transform: translatex(10px);
+    transition: all .5s linear;
+}
+
+.toggle-contacts__list__item__link:hover span {
+    opacity: 1;
+    width: max-content;
+    height: auto;
+    transform: translate(0);
+    z-index: 2;
+    line-height: 2;
+}
+
+.toggle-contacts__list__item__link img {
+    background: #fff;
+    border-radius: 100%;
+}
+
+.toggle-contacts__list__item__link img {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #fff;
+    object-fit: contain;
+    object-position: center;
+    z-index: 5;
+    transition: all .5s linear;
+}
+
+.toggle-contacts__list__item__link:hover img {
+    transform: scale(1.1);
+}
+
+/* Изначально скрываем список контактов */
+.toggle-contacts__list {
+    max-height: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    position: absolute;
+    bottom: 75px;
+    right: 10px;
+}
+
+/* Активное состояние — контакты видны */
+.toggle-contacts__bar.active .toggle-contacts__list {
+    max-height: 1000px;
+    /* достаточно большое значение для всех элементов */
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Добавим небольшое расстояние между элементами */
+.toggle-contacts__list__item {
+    margin-bottom: 10px;
+}
+
+/* Анимация появления для каждого контакта */
+.toggle-contacts__list__item {
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Когда родитель активен, все элементы постепенно выезжают */
+.toggle-contacts__bar.active .toggle-contacts__list__item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.minicart-btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.minicart-btn-group a.button {
+    max-width: 100%;
+    text-align: Center;
+    padding: 5px 20px;
+}

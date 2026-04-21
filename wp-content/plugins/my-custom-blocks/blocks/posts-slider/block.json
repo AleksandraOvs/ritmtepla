@@ -1,0 +1,22 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "my-custom-blocks/posts-slider",
+  "title": "Posts Slider",
+  "category": "widgets",
+  "icon": "slides",
+  "description": "Блок-слайдер с записями",
+  "editorScript": "my-custom-blocks-posts-slider-editor-script",
+  "editorStyle": "my-custom-blocks-posts-slider-editor-style",
+  "style": "my-custom-blocks-posts-slider-style",
+  "attributes": {
+    "showCategories": {
+      "type": "boolean",
+      "default": false
+    },
+    "postIDs": {
+      "type": "string",
+      "default": ""
+    }
+  }
+}

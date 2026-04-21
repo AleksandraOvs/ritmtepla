@@ -1,0 +1,35 @@
+.gallery-slide-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.gallery-slide-list .gallery-slide-editor {
+    height: 200px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.gallery-slide-list .gallery-slide-editor img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.gallery-slide-editor button {
+    z-index: 5;
+    position: absolute;
+    left: 10px;
+    top: 0;
+    background: rgba(255, 255, 255, .7);
+    border-radius: 5px;
+}
+
+.gallery-slide-editor .components-base-control {
+    position: absolute;
+    z-index: 6;
+}

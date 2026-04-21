@@ -1,0 +1,115 @@
+.pics-slider.swiper {
+    width: 100%;
+    overflow: visible;
+}
+
+.pics-slider .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.pics-slider img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.pics-slider h3 {
+    margin: 0;
+    font-size: 1rem;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 36px;
+    text-align: left;
+    font-weight: 700;
+}
+
+
+.swiper-slide.pics-slide {
+    height: 420px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+    transition: all .5s linear;
+}
+
+.swiper-slide.pics-slide>a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.swiper-slide.pics-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    margin: 0;
+}
+
+.swiper.pics-slider .swiper-wrapper {
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+.swiper.pics-slider .swiper-wrapper .pics-slide {
+    width: calc(100% / 2 - 1em);
+    transition: transform .3s cubic-bezier(0, 0, 0.5, 1);
+}
+
+.swiper.pics-slider .swiper-wrapper .pics-slide:hover {
+    transform: scale(1.0161);
+}
+
+.swiper.pics-slider .swiper-wrapper .pics-slide:first-child {
+    width: 100%;
+}
+
+.pics-slider .swiper-pagination {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .swiper.pics-slider .swiper-wrapper {
+        display: flex;
+        gap: unset;
+        flex-wrap: nowrap;
+    }
+
+    .swiper-slide.pics-slide {
+        height: 350px;
+        background: var(--theme-color-black);
+    }
+
+    .pics-slider .swiper-pagination {
+        display: flex;
+        position: relative;
+        margin-top: 30px;
+        justify-content: center;
+    }
+
+    .pics-slider h3 {
+        font-size: 32px;
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .swiper-slide.pics-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: right;
+        margin: 0;
+        transform: translateY(50px);
+    }
+
+}

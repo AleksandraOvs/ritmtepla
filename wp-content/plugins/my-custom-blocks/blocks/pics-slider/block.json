@@ -1,0 +1,18 @@
+{
+  "apiVersion": 2,
+  "name": "my-custom-blocks/pics-slider",
+  "title": "Слайдер изображений",
+  "category": "widgets",
+  "icon": "images-alt2",
+  "description": "Слайдер с изображениями и ссылками",
+  "editorScript": "my-custom-blocks-pics-slider-editor-script",
+  "editorStyle": "my-custom-blocks-pics-slider-editor-style",
+  "style": "my-custom-blocks-pics-slider-style",
+  "attributes": {
+    "items": {
+      "type": "array",
+      "default": []
+    }
+  },
+  "render": "file:./render.php"
+}

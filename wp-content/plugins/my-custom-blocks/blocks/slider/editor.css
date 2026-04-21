@@ -1,0 +1,15 @@
+.wp-block-my-custom-blocks-slider {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+/* 
+.pics-slide-editor {
+    overflow: hidden;
+}
+
+.pics-slide-editor img {
+    width: 100%;
+    height: 100%;
+} */

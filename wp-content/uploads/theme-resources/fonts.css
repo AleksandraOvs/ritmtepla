@@ -1,0 +1,19 @@
+@font-face{
+                font-family:'montserrat';
+                src:url('/wp-content/plugins/theme-resources/assets/fonts/montserrat-regular.woff2') format('woff2');
+                font-weight:400;
+                font-style:normal;
+                font-display:swap;
+            }@font-face{
+                font-family:'montserrat';
+                src:url('/wp-content/plugins/theme-resources/assets/fonts/montserrat-medium.woff') format('woff');
+                font-weight:500;
+                font-style:normal;
+                font-display:swap;
+            }@font-face{
+                font-family:'Montserrat';
+                src:url('/wp-content/plugins/theme-resources/assets/fonts/Montserrat-SemiBold.ttf') format('truetype');
+                font-weight:600;
+                font-style:normal;
+                font-display:swap;
+            }h1,h2,h3{font-family:'Montserrat',sans-serif;}body{font-family:'montserrat',sans-serif;}.accent,.button,strong{font-family:'montserrat',sans-serif;}

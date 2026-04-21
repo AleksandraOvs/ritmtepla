@@ -1,0 +1,29 @@
+.posts-slider-categories {
+    margin-bottom: 20px;
+}
+
+.posts-slider-categories .category-tab {
+    margin-right: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background: #f0f0f0;
+    border: none;
+}
+
+.posts-slider-categories .category-tab.active {
+    background: #0073aa;
+    color: #fff;
+}
+
+.posts-slider .swiper-slide {
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.posts-slider .swiper-slide.hidden-slide {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    /* чтобы скрытые слайды не реагировали на клики */
+}

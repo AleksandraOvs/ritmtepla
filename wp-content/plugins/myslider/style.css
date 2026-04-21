@@ -1,0 +1,326 @@
+/* =========================
+   MySlider Frontend Styles v2
+   ========================= */
+
+.wp-block-myslider-hero-slider.myslider-hero-slider {
+	position: relative;
+	width: 100%;
+	max-width: 100%;
+	overflow: hidden;
+	box-sizing: border-box;
+	max-height: 500px;
+	height: 500px;
+
+}
+
+.myslider-hero-slider,
+.myslider-hero-slider * {
+	box-sizing: border-box;
+}
+
+.myslider__viewport {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+@media (max-width: 781px) {
+	.myslider__viewport {
+		height: var(--myslider-mobile-height, 100svh);
+	}
+}
+
+.myslider__track {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	transform: translate3d(0, 0, 0);
+	will-change: transform;
+	touch-action: pan-y;
+}
+
+.myslider__track.is-dragging {
+	cursor: grabbing;
+}
+
+.myslider__slide {
+	position: relative;
+	flex: 0 0 100%;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.myslider__media {
+	position: absolute;
+	inset: 0;
+	overflow: hidden;
+}
+
+.myslider__img {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	transform-origin: center center;
+	will-change: transform;
+	object-fit: cover;
+}
+
+.myslider__img--mobile {
+	display: none;
+}
+
+@media (max-width: 781px) {
+	.myslider__img--desktop {
+		display: none;
+	}
+
+	.myslider__img--mobile {
+		display: block;
+	}
+}
+
+/* .myslider__overlay {
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, var(--myslider-overlay-opacity, .2));
+	pointer-events: none;
+} */
+
+.myslider__content {
+	position: relative;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	color: var(--myslider-text-color, #fff);
+	pointer-events: none;
+	max-width: 1440px;
+	margin: 0 auto;
+	padding: 40px;
+}
+
+.myslider__item {
+	position: relative;
+	max-width: min(var(--myslider-content-max-width, 720px), calc(100% - 24px));
+	pointer-events: none;
+}
+
+.myslider__item--mobile {
+	display: none;
+}
+
+@media (max-width: 781px) {
+	.myslider__item--desktop {
+		display: none;
+	}
+
+	.myslider__item--mobile {
+		display: block;
+	}
+
+	.myslider__item {
+		max-width: calc(100% - 18px);
+	}
+}
+
+/* Общие текстовые обертки */
+.myslider__textwrap {
+	display: inline-block;
+	background: rgba(0, 0, 0, var(--myslider-text-bg-opacity, 0));
+	padding: var(--myslider-text-pad-y, 0px) var(--myslider-text-pad-x, 0px);
+	border-radius: var(--myslider-text-radius, 0px);
+}
+
+.myslider__title,
+.myslider__subtitle {
+	margin: 0;
+	color: var(--myslider-text-color, #fff);
+	text-wrap: balance;
+}
+
+.myslider__title {
+	font-size: clamp(28px, 4vw, 64px);
+	line-height: 1.1;
+	font-weight: 700;
+	letter-spacing: -0.02em;
+}
+
+.myslider__subtitle {
+	font-size: clamp(14px, 1.2vw + 10px, 22px);
+	line-height: 1.35;
+	max-width: min(var(--myslider-content-max-width, 720px), calc(100vw - 24px));
+}
+
+/* Кнопка */
+.myslider__button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	background: var(--myslider-button-bg, #fff);
+	color: var(--myslider-button-color, #111);
+	font-size: var(--myslider-button-font-size, 16px);
+	padding: var(--myslider-button-padding-y, 10px) var(--myslider-button-padding-x, 18px);
+	border-radius: var(--myslider-button-radius, 8px);
+	line-height: 1;
+	font-weight: 600;
+	pointer-events: auto;
+	transition: background-color .2s ease, color .2s ease, transform .15s ease;
+}
+
+.myslider__button:hover {
+	background: var(--myslider-button-hover-bg, #f3f3f3);
+	color: var(--myslider-button-hover-color, #111);
+	transform: translateY(-1px);
+}
+
+/* Бейдж */
+.myslider__badge {
+	display: inline-block;
+	background: var(--myslider-badge-bg, #ff6a00);
+	color: var(--myslider-badge-color, #fff);
+	font-size: var(--myslider-badge-font-size, 13px);
+	line-height: 1;
+	font-weight: 700;
+	padding: var(--myslider-badge-padding-y, 6px) var(--myslider-badge-padding-x, 10px);
+	border-radius: var(--myslider-badge-radius, 999px);
+	white-space: nowrap;
+}
+
+/* Иконка */
+.myslider__icon-wrap {
+	display: inline-block;
+	max-width: min(100%, 600px);
+}
+
+.myslider__icon {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+/* Стрелки */
+.myslider__arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 50;
+	width: 42px;
+	height: 42px;
+	border-radius: 999px;
+	border: 1px solid rgba(255, 255, 255, .25);
+	background: rgba(0, 0, 0, .35);
+	color: #fff;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	padding: 0;
+	line-height: 1;
+	user-select: none;
+	-webkit-user-select: none;
+	transition: background .2s ease, transform .15s ease;
+}
+
+.myslider__arrow:hover {
+	background: rgba(0, 0, 0, .55);
+}
+
+.myslider__arrow:active {
+	transform: translateY(-50%) scale(.98);
+}
+
+.myslider__arrow--prev {
+	left: 12px;
+}
+
+.myslider__arrow--next {
+	right: 12px;
+}
+
+.myslider__arrow>span {
+	font-size: 28px;
+	transform: translateY(-1px);
+}
+
+/* Dots */
+.myslider__dots {
+	position: absolute;
+	left: 50%;
+	bottom: 14px;
+	transform: translateX(-50%);
+	z-index: 50;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	max-width: calc(100% - 24px);
+	flex-wrap: wrap;
+}
+
+.myslider__dot {
+	width: 8px;
+	height: 8px;
+	border-radius: 999px;
+	border: none;
+	background: rgba(255, 255, 255, .55);
+	cursor: pointer;
+	padding: 0;
+	transition: all .2s ease;
+}
+
+.myslider__dot:hover {
+	background: rgba(255, 255, 255, .85);
+}
+
+.myslider__dot.is-active {
+	width: 22px;
+	height: 8px;
+	background: rgba(255, 255, 255, .95);
+}
+
+.myslider-hero-slider.is-paused .myslider__dots::after {
+	content: "Пауза";
+	margin-left: 8px;
+	color: rgba(255, 255, 255, .85);
+	font-size: 12px;
+	padding: 2px 6px;
+	background: rgba(0, 0, 0, .35);
+	border-radius: 6px;
+}
+
+/* Mobile tweaks */
+@media (max-width: 781px) {
+	.myslider__arrow {
+		width: 36px;
+		height: 36px;
+		top: auto;
+		bottom: 52px;
+		transform: none;
+	}
+
+	.myslider__arrow:active {
+		transform: scale(.98);
+	}
+
+	.myslider__arrow--prev {
+		left: 10px;
+	}
+
+	.myslider__arrow--next {
+		right: 10px;
+	}
+
+	.myslider__title {
+		font-size: clamp(24px, 7vw, 38px);
+		line-height: 1.08;
+	}
+
+	.myslider__subtitle {
+		font-size: clamp(13px, 3.6vw, 17px);
+		line-height: 1.3;
+	}
+}

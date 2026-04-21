@@ -1,0 +1,55 @@
+.tt-format-row {
+    display: none;
+    margin-bottom: 10px;
+}
+
+.tt-format-row.is-visible {
+    display: block;
+}
+
+.tt-accordion__content {
+    display: none;
+    padding: 15px;
+}
+
+.tt-weight-block h4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tt-accordion {
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    background: #fff;
+}
+
+.tt-accordion__header {
+    padding: 12px 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f6f7f7;
+}
+
+.tt-accordion__header h2 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.tt-accordion__content {
+    display: none;
+    padding: 15px;
+}
+
+.tt-weight-block {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #ddd;
+}
+
+.tt-accordion__toggle {
+    font-size: 18px;
+    font-weight: bold;
+}

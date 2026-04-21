@@ -1,0 +1,86 @@
+.categories-slider .swiper-slide {
+    box-sizing: border-box;
+    position: relative;
+
+}
+
+.categories-slider .swiper-slide h3 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 0;
+}
+
+a.category-image {
+    display: block;
+    aspect-ratio: 3/2;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 25px;
+    background: var(--theme-color-black);
+}
+
+a.category-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.category-item h3 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+/* Для больших экранов делаем сетку внутри слайдов */
+@media (min-width: 1024px) {
+    .categories-slider .swiper-wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        /* 4 товара в ряд */
+        grid-auto-rows: auto;
+        row-gap: 50px;
+    }
+
+    .categories-slider .swiper-slide {
+        width: auto;
+        /* чтобы сетка работала */
+    }
+}
+
+/* Меньше 1024px — один ряд товаров */
+@media (max-width: 1023px) {
+    .categories-slider .swiper-wrapper {
+        display: flex;
+    }
+
+    .categories-slider .swiper-slide {
+        width: calc(25% - 15px);
+        /* 4 товара в ряд */
+        margin-right: 20px;
+    }
+}
+
+/* Меньше 768px — 2 товара в ряд */
+@media (max-width: 768px) {
+    .swiper.categories-slider {
+        overflow: visible;
+    }
+
+    .categories-slider .swiper-slide {
+        position: relative;
+    }
+}
+
+/* Меньше 480px — 1 товар в ряд */
+@media (max-width: 480px) {
+    .categories-slider .swiper-slide {
+        width: 100%;
+        margin-right: 0;
+    }
+}
