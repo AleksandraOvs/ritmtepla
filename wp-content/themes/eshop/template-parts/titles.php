@@ -1,6 +1,6 @@
 <?php
 // Не выводим заголовок на страницах cart, checkout, account и одиночного товара
-if (! (is_cart() || is_checkout() || is_account_page() || is_singular('product'))) {
+if (! (is_singular('product'))) {
 
     if (is_shop() || is_product_taxonomy() || is_post_type_archive('product')) {
         // Главная магазина или архив категорий/товаров

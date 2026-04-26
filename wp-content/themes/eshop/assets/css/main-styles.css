@@ -231,6 +231,11 @@ figure.wp-block-image img {
 
 /*breadcrumbs*/
 
+.page-header-wrapper .container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
 .breadcrumbs__list {
     font-size: 13px;
     color: var(--theme-color-secondary);
@@ -474,12 +479,19 @@ body.archive.custom-background {
     background: var(--theme-color-secondary);
 }
 
-body.archive #primary #main .woocommerce-page__content .page-header-wrapper .container h1 {
+body.woocommerce-checkout.woocommerce-page {
+    background: var(--theme-color-secondary);
+}
+
+body.archive #primary #main .woocommerce-page__content .page-header-wrapper .container h1,
+body.woocommerce-checkout #page .page-content .page-header-wrapper .container h1 {
     color: var(--theme-color-black);
 }
 
 body.archive #primary #main .woocommerce-page__content .page-header-wrapper .container .breadcrumbs__list,
-body.archive #primary #main .woocommerce-page__content .page-header-wrapper .container .breadcrumbs__list a {
+body.archive #primary #main .woocommerce-page__content .page-header-wrapper .container .breadcrumbs__list a,
+body.woocommerce-checkout #page .page-content .page-header-wrapper .container .breadcrumbs__list,
+body.woocommerce-checkout #page .page-content .page-header-wrapper .container .breadcrumbs__list a {
     color: var(--theme-color-black);
 }
 
