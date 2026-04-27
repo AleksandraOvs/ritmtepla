@@ -212,7 +212,7 @@ div#minicart-popup .close svg {
 }
 
 .woocommerce-mini-cart-item .product-details h2 a {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     color: var(--theme-color-secondary);
     text-align: left;
