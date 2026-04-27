@@ -286,3 +286,25 @@ add_action('wp_footer', function () {
     </style>
 <?php
 });
+
+add_action('wp', function () {
+
+    // работаем только на странице "Спасибо за заказ"
+    if (!is_wc_endpoint_url('order-received')) {
+        return;
+    }
+
+    // убираем детали заказа
+    remove_action(
+        'woocommerce_thankyou',
+        'woocommerce_order_details_table',
+        10
+    );
+
+    // убираем данные покупателя
+    remove_action(
+        'woocommerce_thankyou',
+        'woocommerce_order_details_customer_details',
+        20
+    );
+});

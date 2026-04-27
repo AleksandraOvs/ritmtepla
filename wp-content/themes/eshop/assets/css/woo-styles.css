@@ -884,8 +884,8 @@ a.cross-product__slide__image img {
 /*CHECKOUT*/
 .checkout-order-fields {
     display: grid;
-    /* grid-template-columns: calc(65% - 3em) 35%; */
-    grid-template-columns: 1fr;
+    grid-template-columns: calc(65% - 3em) 35%;
+    /* grid-template-columns: 1fr; */
     gap: 1em;
 }
 
@@ -1018,6 +1018,7 @@ body.woocommerce-checkout #page .page-content * {
     margin-top: -20px;
     background: #fff;
     z-index: 3;
+    justify-content: space-between;
 }
 
 #woocommerce-checkout-form-coupon .form-row {
@@ -1081,6 +1082,98 @@ body.woocommerce-checkout #page .page-content * {
 
 .woocommerce-shipping-fields__field-wrapper #shipping_address_1_field {
     width: calc(100% - 160px);
+}
+
+.woocommerce form .form-row .input-text,
+.woocommerce form .form-row select {
+    font-family: inherit;
+    font-weight: 400;
+    letter-spacing: normal;
+    padding: 10px 10px 5px 10px;
+    display: block;
+    background-color: transparent;
+    border-radius: 0;
+    color: var(--wc-form-color-text, #000);
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    line-height: normal;
+    height: auto;
+    border: none;
+    border-bottom: 1px solid var(--theme-color-black);
+    font-size: 16px;
+}
+
+.woocommerce-billing-fields__field-wrapper {
+    flex-direction: column;
+}
+
+.woocommerce-billing-fields__field-wrapper>p {
+    width: 100%;
+}
+
+.woocommerce-shipping-fields__field-wrapper p:first-child {
+    width: 70px;
+}
+
+.woocommerce-shipping-fields__field-wrapper #shipping_address_1_field {
+    width: calc(100% - 80px);
+}
+
+.woocommerce form .form-row .input-text:active,
+.woocommerce form .form-row .input-text:focus {
+    border: 1px solid #cacaca !important;
+    outline: none;
+    background: #fff;
+}
+
+#woocommerce-checkout-form-coupon .clear {
+    display: none;
+}
+
+.woocommerce-order>p.woocommerce-notice {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.woocommerce-order-overview {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.woocommerce-order-overview li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.woocommerce-order-overview li {
+    display: flex;
+    justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px dotted #5b5b5b;
+    align-items: flex-end;
+    border-right: 0;
+}
+
+.woocommerce ul.order_details li {
+    float: left;
+    margin-right: 0;
+    text-transform: uppercase;
+    font-size: .715em;
+    line-height: 1;
+    border-right: none;
+    padding-right: 10px;
+}
+
+.woocommerce ul.order_details li bdi {
+    font-size: 16px;
+}
+
+.woocommerce-order {
+    margin-bottom: 70px;
 }
 
 @media (max-width: 992px) {
@@ -1180,15 +1273,32 @@ body.woocommerce-checkout #page .page-content * {
     }
 
     .woocommerce-form-coupon-toggle .woocommerce-info {
+        font-size: 12px;
+    }
+
+    .woocommerce form.checkout_coupon {
+        justify-content: space-between;
         flex-direction: column;
         gap: 10px;
     }
 
     .woocommerce-billing-fields__field-wrapper {
-        flex-direction: column;
+        flex-direction: row;
+    }
+
+    #woocommerce-checkout-form-coupon .form-row-first #coupon_code {
+        font-size: 16px;
+    }
+
+    .form-row.form-row-last .button {
+        font-size: 14px;
     }
 
     .woocommerce-billing-fields__field-wrapper>p {
+        width: calc(50% - 5px);
+    }
+
+    .woocommerce-billing-fields__field-wrapper p:first-child {
         width: 100%;
     }
 
@@ -1200,7 +1310,11 @@ body.woocommerce-checkout #page .page-content * {
         width: calc(100% - 80px);
     }
 
-
+    .checkout-order-fields {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1em;
+    }
 }
 
 @media (max-width: 480px) {
