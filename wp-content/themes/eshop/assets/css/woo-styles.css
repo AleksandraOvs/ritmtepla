@@ -1216,6 +1216,10 @@ body.woocommerce-checkout #page .page-content * {
     margin-bottom: 70px;
 }
 
+#checkout-page-wrapper form div div .woocommerce-error li a {
+    color: #fff !important;
+}
+
 @media (max-width: 992px) {
     .single-product__related .container:last-child {
         overflow-x: visible;

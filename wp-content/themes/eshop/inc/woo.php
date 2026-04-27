@@ -315,35 +315,37 @@ add_action('wp_footer', function () {
     <script>
         document.addEventListener('DOMContentLoaded', function() {
 
-            const phoneInput = document.querySelector('#billing_phone');
+            const input = document.querySelector('#billing_phone');
+            if (!input) return;
 
-            if (!phoneInput) return;
+            function getDigits(value) {
+                return value.replace(/\D/g, '');
+            }
 
-            function maskPhone(value) {
-                value = value.replace(/\D/g, '');
+            function formatPhone(digits) {
+                if (digits.startsWith('8')) digits = '7' + digits.slice(1);
+                if (!digits.startsWith('7')) digits = '7' + digits;
 
-                if (value.startsWith('8')) {
-                    value = '7' + value.slice(1);
-                }
+                let result = '+7';
 
-                if (!value.startsWith('7')) {
-                    value = '7' + value;
-                }
-
-                let result = '+7 (';
-
-                if (value.length > 1) result += value.substring(1, 4);
-                if (value.length >= 5) result += ') ' + value.substring(4, 7);
-                if (value.length >= 8) result += '-' + value.substring(7, 9);
-                if (value.length >= 10) result += '-' + value.substring(9, 11);
+                if (digits.length > 1) result += ' (' + digits.substring(1, 4);
+                if (digits.length >= 5) result += ') ' + digits.substring(4, 7);
+                if (digits.length >= 8) result += '-' + digits.substring(7, 9);
+                if (digits.length >= 10) result += '-' + digits.substring(9, 11);
 
                 return result;
             }
 
-            phoneInput.addEventListener('input', function(e) {
-                const cursor = this.selectionStart;
-                this.value = maskPhone(this.value);
-                this.setSelectionRange(cursor, cursor);
+            input.addEventListener('input', function() {
+
+                let digits = getDigits(this.value);
+
+                // ограничение длины
+                digits = digits.substring(0, 11);
+
+                const formatted = formatPhone(digits);
+
+                this.value = formatted;
             });
 
         });
