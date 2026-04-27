@@ -1026,13 +1026,16 @@ body.woocommerce-checkout #page .page-content * {
 
 #woocommerce-checkout-form-coupon .form-row-first #coupon_code {
     height: 100%;
+    background-color: #f5f5f5;
+    border-radius: 6px;
+    color: var(--wc-form-color-text, #000);
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    line-height: normal;
+    height: auto;
     border: none;
-    border-radius: 0;
-    background: transparent;
-    font-size: 24px;
-    color: var(--theme-color-black);
-    border-bottom: 1px solid var(--theme-color-black);
-    outline: none;
+    border: 1px solid #b3b3b3;
 }
 
 #woocommerce-checkout-form-coupon .form-row-last {
@@ -1328,7 +1331,10 @@ body.woocommerce-checkout #page .page-content * {
     }
 
     .form-row.form-row-last .button {
-        font-size: 14px;
+        font-size: 12px;
+        padding: 7px 10px;
+        border: 1px solid var(--theme-color-accent);
+        border-radius: 30px;
     }
 
     .woocommerce-billing-fields__field-wrapper>p {
@@ -1460,6 +1466,15 @@ body.woocommerce-checkout #page .page-content * {
 
     .woocommerce-billing-fields__field-wrapper>p {
         width: 100%;
+    }
+
+    #woocommerce-checkout-form-coupon {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-row.form-row-last .button {
+        font-size: 14px;
     }
 
 }
