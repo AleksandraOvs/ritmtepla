@@ -1154,7 +1154,7 @@ body.woocommerce-checkout #page .page-content * {
     justify-content: space-between;
     padding: 10px;
     border-bottom: 1px dotted #5b5b5b;
-    align-items: flex-end;
+    align-items: center;
     border-right: 0;
 }
 
@@ -1174,6 +1174,10 @@ body.woocommerce-checkout #page .page-content * {
 
 .woocommerce-order {
     margin-bottom: 70px;
+}
+
+.woocommerce ul.order_details li strong {
+    text-align: right;
 }
 
 @media (max-width: 992px) {
