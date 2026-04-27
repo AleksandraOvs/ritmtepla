@@ -884,9 +884,8 @@ a.cross-product__slide__image img {
 /*CHECKOUT*/
 .checkout-order-fields {
     display: grid;
-    grid-template-columns: calc(65% - 3em) 35%;
-    /* grid-template-columns: 1fr; */
-    gap: 1em;
+    grid-template-columns: calc(65% - 2em) 35%;
+    gap: 2em;
 }
 
 .woocommerce-billing-fields h3 {
@@ -1457,6 +1456,10 @@ body.woocommerce-checkout #page .page-content * {
 
     .cross-product__slide__content a {
         text-align: center;
+    }
+
+    .woocommerce-billing-fields__field-wrapper>p {
+        width: 100%;
     }
 
 }
