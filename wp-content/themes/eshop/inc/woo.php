@@ -114,9 +114,15 @@ add_filter('woocommerce_checkout_fields', function ($fields) {
     ];
 
     /** 📞 Телефон */
-    $fields['billing']['billing_phone']['priority']    = 20;
+    $fields['billing']['billing_phone']['type'] = 'tel';
+    $fields['billing']['billing_phone']['priority'] = 20;
     $fields['billing']['billing_phone']['placeholder'] = '+7 (___) ___-__-__';
-    $fields['billing']['billing_phone']['required']    = true;
+    $fields['billing']['billing_phone']['required'] = true;
+    $fields['billing']['billing_phone']['custom_attributes'] = [
+        'inputmode' => 'tel',
+        'autocomplete' => 'tel',
+        'pattern' => '\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}'
+    ];
 
     /** 📧 Email */
     $fields['billing']['billing_email']['priority']    = 30;
@@ -301,4 +307,46 @@ add_action('wp', function () {
         'woocommerce_order_details_customer_details',
         20
     );
+});
+
+add_action('wp_footer', function () {
+    if (!is_checkout()) return;
+?>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            const phoneInput = document.querySelector('#billing_phone');
+
+            if (!phoneInput) return;
+
+            function maskPhone(value) {
+                value = value.replace(/\D/g, '');
+
+                if (value.startsWith('8')) {
+                    value = '7' + value.slice(1);
+                }
+
+                if (!value.startsWith('7')) {
+                    value = '7' + value;
+                }
+
+                let result = '+7 (';
+
+                if (value.length > 1) result += value.substring(1, 4);
+                if (value.length >= 5) result += ') ' + value.substring(4, 7);
+                if (value.length >= 8) result += '-' + value.substring(7, 9);
+                if (value.length >= 10) result += '-' + value.substring(9, 11);
+
+                return result;
+            }
+
+            phoneInput.addEventListener('input', function(e) {
+                const cursor = this.selectionStart;
+                this.value = maskPhone(this.value);
+                this.setSelectionRange(cursor, cursor);
+            });
+
+        });
+    </script>
+<?php
 });
