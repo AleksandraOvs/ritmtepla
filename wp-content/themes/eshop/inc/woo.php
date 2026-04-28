@@ -353,15 +353,15 @@ add_action('wp_footer', function () {
 <?php
 });
 
-add_filter('gettext', function ($translated, $text, $domain) {
+// add_filter('gettext', function ($translated, $text, $domain) {
 
-    if ($text === 'Add coupon') {
-        return 'Добавить промокод';
-    }
+//     if ($text === 'Add coupon') {
+//         return 'Добавить промокод';
+//     }
 
-    if ($text === 'Estimated total') {
-        return 'Итог:';
-    }
+//     if ($text === 'Estimated total') {
+//         return 'Итог:';
+//     }
 
-    return $translated;
-}, 20, 3);
+//     return $translated;
+// }, 20, 3);
