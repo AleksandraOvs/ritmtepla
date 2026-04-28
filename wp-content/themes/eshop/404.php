@@ -16,7 +16,7 @@ get_header() ?>
                     </svg>
                 </div>
                 <strong>Запрашиваемая вами страница не найдена :(</strong>
-                <div class="error-oage__content__message">Воспользуйтесь нашим <a href="/catalog">каталогом</a> или поиском для выбора подходящей модели</div>
+                <div class="error-oage__content__message">Воспользуйтесь нашим <a href="/catalog">каталогом</a> для выбора подходящего товара</div>
                 <a href="<?php echo site_url() ?>" class="button">Перейти на главную</a>
             </div>
         </div>
