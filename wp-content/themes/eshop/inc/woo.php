@@ -109,14 +109,14 @@ add_filter('woocommerce_checkout_fields', function ($fields) {
         'type'        => 'text',
         'priority'    => 10,
         'class'       => ['form-row-wide'],
-        'placeholder' => 'Ф.И.О',
+        'placeholder' => 'Ф.И.О*',
         'required'    => true,
     ];
 
     /** 📞 Телефон */
     $fields['billing']['billing_phone']['type'] = 'tel';
     $fields['billing']['billing_phone']['priority'] = 20;
-    $fields['billing']['billing_phone']['placeholder'] = '+7 (___) ___-__-__';
+    $fields['billing']['billing_phone']['placeholder'] = '+7 (___) ___-__-__*';
     $fields['billing']['billing_phone']['required'] = true;
     $fields['billing']['billing_phone']['custom_attributes'] = [
         'inputmode' => 'tel',
@@ -126,7 +126,7 @@ add_filter('woocommerce_checkout_fields', function ($fields) {
 
     /** 📧 Email */
     $fields['billing']['billing_email']['priority']    = 30;
-    $fields['billing']['billing_email']['placeholder'] = 'E-mail';
+    $fields['billing']['billing_email']['placeholder'] = 'E-mail*';
     $fields['billing']['billing_email']['required']    = true;
 
     /** 🌍 Страна (если нужна — оставляем select WooCommerce) */
@@ -134,17 +134,17 @@ add_filter('woocommerce_checkout_fields', function ($fields) {
 
     /** 📮 Индекс */
     $fields['billing']['billing_postcode']['priority']    = 50;
-    $fields['billing']['billing_postcode']['placeholder'] = 'Индекс';
+    $fields['billing']['billing_postcode']['placeholder'] = 'Индекс*';
     $fields['billing']['billing_postcode']['required']    = true;
 
     /** 🏙 Город */
     $fields['billing']['billing_city']['priority']    = 60;
-    $fields['billing']['billing_city']['placeholder'] = 'Город';
+    $fields['billing']['billing_city']['placeholder'] = 'Город*';
     $fields['billing']['billing_city']['required']    = true;
 
     /** 🏠 Улица */
     $fields['billing']['billing_address_1']['priority']    = 70;
-    $fields['billing']['billing_address_1']['placeholder'] = 'Улица';
+    $fields['billing']['billing_address_1']['placeholder'] = 'Улица*';
     $fields['billing']['billing_address_1']['required']    = true;
 
     /** 🏢 Дом */
