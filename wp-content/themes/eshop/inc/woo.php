@@ -352,3 +352,16 @@ add_action('wp_footer', function () {
     </script>
 <?php
 });
+
+add_filter('gettext', function ($translated, $text, $domain) {
+
+    if ($text === 'Add coupon') {
+        return 'Добавить промокод';
+    }
+
+    if ($text === 'Estimated total') {
+        return 'Итог:';
+    }
+
+    return $translated;
+}, 20, 3);
