@@ -365,3 +365,12 @@ add_action('wp_footer', function () {
 
 //     return $translated;
 // }, 20, 3);
+
+add_filter('woocommerce_blocks_translate_text', function ($translation, $text, $domain) {
+
+    if ($text === 'privacy policy') {
+        return 'политике конфиденциальности';
+    }
+
+    return $translation;
+}, 10, 3);
