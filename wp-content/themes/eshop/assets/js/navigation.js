@@ -81,51 +81,51 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
 
-//     const buttons = document.querySelectorAll('.toggle-menu');
-//     const closeButtons = document.querySelectorAll('.close-menu');
+    const buttons = document.querySelectorAll('.toggle-menu');
+    const closeButtons = document.querySelectorAll('.close-menu');
 
-//     buttons.forEach(button => {
-//         button.addEventListener('click', function (e) {
-//             e.preventDefault();
-//             e.stopPropagation();
+    buttons.forEach(button => {
+        button.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
 
-//             const menu = button.nextElementSibling;
+            const menu = button.nextElementSibling;
 
-//             // закрываем все остальные меню
-//             document.querySelectorAll('.main-navigation .active').forEach(el => {
-//                 if (el !== menu) {
-//                     el.classList.remove('active');
-//                 }
-//             });
+            // закрываем все остальные меню
+            document.querySelectorAll('.main-navigation .active').forEach(el => {
+                if (el !== menu) {
+                    el.classList.remove('active');
+                }
+            });
 
-//             // переключаем текущее
-//             menu.classList.toggle('active');
-//         });
-//     });
+            // переключаем текущее
+            menu.classList.toggle('active');
+        });
+    });
 
-//     // клик по кнопке закрытия
-//     closeButtons.forEach(btn => {
-//         btn.addEventListener('click', function (e) {
-//             e.preventDefault();
-//             e.stopPropagation();
+    // клик по кнопке закрытия
+    closeButtons.forEach(btn => {
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
 
-//             document.querySelectorAll('.main-navigation .active').forEach(el => {
-//                 el.classList.remove('active');
-//             });
-//         });
-//     });
+            document.querySelectorAll('.main-navigation .active').forEach(el => {
+                el.classList.remove('active');
+            });
+        });
+    });
 
-//     // клик вне меню — закрываем всё
-//     document.addEventListener('click', function (e) {
-//         const isClickInside = e.target.closest('.main-navigation');
+    // клик вне меню — закрываем всё
+    document.addEventListener('click', function (e) {
+        const isClickInside = e.target.closest('.main-navigation');
 
-//         if (!isClickInside) {
-//             document.querySelectorAll('.main-navigation .active').forEach(el => {
-//                 el.classList.remove('active');
-//             });
-//         }
-//     });
+        if (!isClickInside) {
+            document.querySelectorAll('.main-navigation .active').forEach(el => {
+                el.classList.remove('active');
+            });
+        }
+    });
 
-// });
+});
