@@ -1082,19 +1082,19 @@ body.woocommerce-checkout #page .page-content * {
 
 #billing_country_field,
 #billing_postcode_field {
-    width: calc(25% - 7px);
+    width: calc(23.5% - 3.3333px);
 }
 
 #billing_city_field {
-    width: calc(25% - 7px);
+    width: calc(25% - 3.4px);
 }
 
 #billing_address_2_field {
-    width: calc(14.5% - 5px);
+    width: calc(14.5% - 3.3333px);
 }
 
 #billing_address_1_field {
-    width: calc(34% - 7px);
+    width: calc(34% - 3.3333px);
 }
 
 .woocommerce form .form-row .input-text::placeholder {
