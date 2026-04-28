@@ -2,6 +2,10 @@ body {
     font-weight: 400;
 }
 
+html {
+    scroll-behavior: auto !important;
+}
+
 body._fixed {
     overflow: hidden;
 }

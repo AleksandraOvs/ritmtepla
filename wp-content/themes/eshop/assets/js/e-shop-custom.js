@@ -61,46 +61,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    function easeInOutQuad(t) {
-        return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+    function easeOutQuint(t) {
+        return 1 - Math.pow(1 - t, 5);
     }
 
-    function smoothScrollToElement(selector, duration = 700) {
-        const target = document.querySelector(selector);
-        if (!target) return;
-
+    function smoothScrollTo(target, duration = 1000, offset = 200) {
         const element = document.scrollingElement || document.documentElement;
         const start = element.scrollTop;
-        const offset = 160; // под хедер
         const targetTop = target.getBoundingClientRect().top + start - offset;
         const change = targetTop - start;
         const startTime = performance.now();
 
         function animate(currentTime) {
-            const progress = Math.min((currentTime - startTime) / duration, 1);
-            element.scrollTop = start + change * easeInOutQuad(progress);
-            if (progress < 1) requestAnimationFrame(animate);
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const ease = easeOutQuint(progress);
+
+            element.scrollTop = start + change * ease;
+
+            if (elapsed < duration) {
+                requestAnimationFrame(animate);
+            }
         }
 
         requestAnimationFrame(animate);
     }
 
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
-        link.addEventListener('click', e => {
-            const href = link.getAttribute('href');
+    document.addEventListener('click', function (e) {
+        const link = e.target.closest('a[href*="#"]');
+        if (!link) return;
 
-            // ❗ игнорируем пустые якоря
-            if (!href || href === '#') return;
+        const url = new URL(link.href);
+        const id = url.hash;
 
-            const target = document.querySelector(href);
+        if (!id) return;
 
-            // ❗ если элемента нет — не ломаем поведение
-            if (!target) return;
+        const target = document.querySelector(id);
+        if (!target) return;
 
-            e.preventDefault();
+        e.preventDefault();
 
-            smoothScrollToElement(href);
-        });
+        smoothScrollTo(target, 1000, 100);
     });
 
 });
