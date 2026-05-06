@@ -514,8 +514,9 @@ h2.category-heading:after {
 
 .related-products-slider h2 {
     font-size: 18px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-weight: 400;
+    margin-top: 10px;
 }
 
 .woocommerce-LoopProduct-link img {
@@ -534,6 +535,10 @@ h2.category-heading:after {
     margin-top: 2em;
 }
 
+.swiper.related-products-slider .swiper-wrapper .swiper-slide li .button {
+    margin-top: 20px;
+}
+
 /*QTY*/
 
 .product-inner__content form.cart {
@@ -546,7 +551,8 @@ h2.category-heading:after {
     float: none;
     margin: 0;
     display: flex;
-    gap: 10px;
+    gap: 7px;
+    align-items: center;
 }
 
 .woocommerce div.product form.cart::after,
@@ -567,12 +573,12 @@ h2.category-heading:after {
 
 .quantity.pro-qty button,
 .wc-block-components-quantity-selector .wc-block-components-quantity-selector__button {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
     border-radius: 100%;
     background: transparent;
-    padding: 10px;
+    padding: 7px;
     transition: all .3s cubic-bezier(0, 0, 0.5, 1);
     display: block;
     border: 1px solid var(--theme-color-black);
@@ -611,6 +617,7 @@ h2.category-heading:after {
     border-bottom-style: none;
     border-bottom-color: currentcolor;
     border-bottom: 2px solid var(--theme-color-black);
+    height: 30px;
     color: #fff;
     font-size: 18px;
     font-weight: 300;
@@ -948,6 +955,11 @@ a.cross-product__slide__image img {
 
 .woocommerce-terms-and-conditions-wrapper .form-row.validate-required {
     margin-top: 10px;
+}
+
+#terms_description {
+    margin-top: 10px;
+    color: var(--wc-red) !important;
 }
 
 .woocommerce #payment #place_order,
@@ -1326,6 +1338,15 @@ body.woocommerce-checkout #page .page-content * {
         gap: 10px;
     } */
 
+    .woocommerce ul.products li.product .woocommerce-loop-product__title {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        padding: 0 !important;
+        margin-bottom: 10px;
+    }
+
     .woocommerce-billing-fields__field-wrapper {
         flex-direction: row;
     }
@@ -1407,7 +1428,6 @@ body.woocommerce-checkout #page .page-content * {
 
     .woocommerce ul.products li.product .woocommerce-loop-product__title {
         padding: .5em 0;
-        margin: 0;
         font-size: 14px;
     }
 
