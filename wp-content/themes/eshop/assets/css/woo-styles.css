@@ -1555,3 +1555,7 @@ body.woocommerce-checkout #page .page-content * {
     font-weight: 600;
     height: auto;
 } */
+
+.wc_payment_methods.payment_methods.methods {
+    display: none;
+}
