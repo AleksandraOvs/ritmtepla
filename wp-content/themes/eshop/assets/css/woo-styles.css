@@ -1524,6 +1524,7 @@ body.woocommerce-checkout #page .page-content * {
     flex-direction: column;
 }
 
+/* 
 .wc-block-components-text-input.wc-block-components-totals-coupon__input input {
     background: transparent;
     padding: 5px;
@@ -1553,4 +1554,4 @@ body.woocommerce-checkout #page .page-content * {
     color: var(--theme-color-black);
     font-weight: 600;
     height: auto;
-}
+} */
