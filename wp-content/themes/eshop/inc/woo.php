@@ -134,7 +134,7 @@ add_filter('woocommerce_checkout_fields', function ($fields) {
 
     /** 📮 Индекс */
     $fields['billing']['billing_postcode']['priority']    = 80;
-    $fields['billing']['billing_postcode']['placeholder'] = 'Индекс';
+    $fields['billing']['billing_postcode']['placeholder'] = 'Индекс*';
     $fields['billing']['billing_postcode']['required']    = false;
 
     /** 🏙 Город */
@@ -376,21 +376,6 @@ add_filter('woocommerce_blocks_translate_text', function ($translation, $text, $
 }, 10, 3);
 
 
-// add_action('wp_footer', function () {
-// 
-?>
-<script>
-    //         document.addEventListener('DOMContentLoaded', function() {
-    //             document.querySelectorAll('*').forEach(el => {
-    //                 if (el.childNodes.length === 1 && el.textContent.trim() === 'Добавить купоны') {
-    //                     el.textContent = 'Добавить промокод';
-    //                 }
-    //             });
-    //         });
-    //     
-</script>
-<?php
-// });
 
 add_action('wp_footer', function () {
 ?>
