@@ -1523,3 +1523,26 @@ body.woocommerce-checkout #page .page-content * {
 .variations_form.cart {
     flex-direction: column;
 }
+
+.wc-block-components-text-input.wc-block-components-totals-coupon__input input {
+    background: transparent;
+    padding: 5px;
+    border: 1px solid #fff;
+    border-radius: 0;
+    height: 100%;
+}
+
+.wc-block-components-text-input.wc-block-components-totals-coupon__input label {
+    top: 10px;
+    position: absolute;
+    transform: none;
+    left: 10px;
+}
+
+#wc-block-components-totals-coupon__form button {
+    background: var(--theme-color-accent);
+    border-radius: 30px;
+    color: var(--theme-color-black);
+    font-weight: 600;
+    height: auto;
+}
