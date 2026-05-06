@@ -120,6 +120,10 @@ a.button:hover {
     font-family: var(--font-accent);
 }
 
+.fancybox__slide .f-panzoom__wrapper .f-button {
+    display: none;
+}
+
 .block-editor-iframe__container {
     background: var(--theme-color-black);
 }
