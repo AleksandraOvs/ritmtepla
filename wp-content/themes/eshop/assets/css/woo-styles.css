@@ -1532,6 +1532,12 @@ body.woocommerce-checkout #page .page-content * {
     height: 100%;
 }
 
+.wc-block-components-text-input.wc-block-components-totals-coupon__input input:focus {
+    background: transparent;
+    padding: 5px;
+    border-color: var(--theme-color-accent);
+}
+
 .wc-block-components-text-input.wc-block-components-totals-coupon__input label {
     top: 10px;
     position: absolute;
