@@ -133,27 +133,27 @@ add_filter('woocommerce_checkout_fields', function ($fields) {
     //$fields['billing']['billing_country']['priority'] = 40;
 
     /** 📮 Индекс */
-    $fields['billing']['billing_postcode']['priority']    = 50;
-    $fields['billing']['billing_postcode']['placeholder'] = 'Индекс*';
-    $fields['billing']['billing_postcode']['required']    = true;
+    $fields['billing']['billing_postcode']['priority']    = 80;
+    $fields['billing']['billing_postcode']['placeholder'] = 'Индекс';
+    $fields['billing']['billing_postcode']['required']    = false;
 
     /** 🏙 Город */
-    $fields['billing']['billing_city']['priority']    = 60;
+    $fields['billing']['billing_city']['priority']    = 50;
     $fields['billing']['billing_city']['placeholder'] = 'Город*';
     $fields['billing']['billing_city']['required']    = true;
 
     /** 🏠 Улица */
-    $fields['billing']['billing_address_1']['priority']    = 70;
+    $fields['billing']['billing_address_1']['priority']    = 60;
     $fields['billing']['billing_address_1']['placeholder'] = 'Улица*';
     $fields['billing']['billing_address_1']['required']    = true;
 
     /** 🏢 Дом */
     $fields['billing']['billing_address_2'] = [
         'type'        => 'text',
-        'priority'    => 80,
+        'priority'    => 70,
         'class'       => ['form-row-first'],
-        'placeholder' => 'Дом / корпус / строение',
-        'required'    => false,
+        'placeholder' => 'Дом*',
+        'required'    => true,
     ];
 
     /** ===================================================
@@ -374,3 +374,44 @@ add_filter('woocommerce_blocks_translate_text', function ($translation, $text, $
 
     return $translation;
 }, 10, 3);
+
+
+// add_action('wp_footer', function () {
+// 
+?>
+<script>
+    //         document.addEventListener('DOMContentLoaded', function() {
+    //             document.querySelectorAll('*').forEach(el => {
+    //                 if (el.childNodes.length === 1 && el.textContent.trim() === 'Добавить купоны') {
+    //                     el.textContent = 'Добавить промокод';
+    //                 }
+    //             });
+    //         });
+    //     
+</script>
+<?php
+// });
+
+add_action('wp_footer', function () {
+?>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            const replaceText = (node) => {
+                node.childNodes.forEach(child => {
+                    if (child.nodeType === Node.TEXT_NODE) {
+                        if (child.nodeValue.trim() === 'Добавить купоны') {
+                            child.nodeValue = 'Добавить промокод';
+                        }
+                    }
+                });
+            };
+
+            document.querySelectorAll('*').forEach(el => {
+                replaceText(el);
+            });
+
+        });
+    </script>
+<?php
+});
