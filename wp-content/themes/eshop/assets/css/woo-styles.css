@@ -1519,3 +1519,7 @@ body.woocommerce-checkout #page .page-content * {
     display: flex;
     align-items: center;
 }
+
+.variations_form.cart {
+    flex-direction: column;
+}
