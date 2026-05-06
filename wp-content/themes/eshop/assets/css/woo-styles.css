@@ -1536,6 +1536,8 @@ body.woocommerce-checkout #page .page-content * {
     background: transparent;
     padding: 5px;
     border-color: var(--theme-color-accent);
+    outline: none;
+    color: var(--theme-color-secondary);
 }
 
 .wc-block-components-text-input.wc-block-components-totals-coupon__input label {
