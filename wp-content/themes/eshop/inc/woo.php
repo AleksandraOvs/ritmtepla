@@ -74,7 +74,7 @@ function change_coupon_text($translated, $text, $domain)
         }
 
         if (stripos($text, 'coupon') !== false) {
-            return 'Промокод';
+            return 'Добавить промокод';
         }
     }
 
