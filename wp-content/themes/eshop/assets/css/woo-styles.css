@@ -1515,7 +1515,7 @@ body.woocommerce-checkout #page .page-content * {
 
 }
 
-.product .container .product-inner .product-inner__content form.cart {
+.woocommerce-page__content .product .container .product-inner .product-inner__content form.cart {
     display: flex;
     align-items: center;
 }
