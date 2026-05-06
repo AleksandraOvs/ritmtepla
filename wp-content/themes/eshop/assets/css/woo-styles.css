@@ -518,7 +518,7 @@ h2.category-heading:after {
     font-weight: 400;
     margin-top: 10px;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
