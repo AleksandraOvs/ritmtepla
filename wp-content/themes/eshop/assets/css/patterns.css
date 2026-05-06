@@ -553,9 +553,7 @@ p.hero-desc {
         margin-bottom: 15px;
         line-height: 140%;
     }
-}
 
-@media (max-width: 360px) {
     .wp-block-group.three-columns .wp-block-columns .wp-block-column figure.adv-img {
         position: absolute;
         right: 10px;
@@ -563,7 +561,10 @@ p.hero-desc {
         width: 40px;
         height: 40px;
     }
+
 }
+
+@media (max-width: 360px) {}
 
 
 /*ADV ITEMS*/
