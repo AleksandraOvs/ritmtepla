@@ -55,32 +55,32 @@ add_filter('gettext', function ($translated, $text, $domain) {
 }, 20, 3);
 
 
-// add_filter('gettext', 'change_coupon_text', 20, 3);
-// function change_coupon_text($translated, $text, $domain)
-// {
+add_filter('gettext', 'change_coupon_text', 20, 3);
+function change_coupon_text($translated, $text, $domain)
+{
 
-//     if ($domain === 'woocommerce') {
+    if ($domain === 'woocommerce') {
 
-//         if ($text === 'Have a coupon?') {
-//             return 'Использовать промокод';
-//         }
+        if ($text === 'Have a coupon?') {
+            return 'Есть промокод?';
+        }
 
-//         if ($text === 'Have a coupon? Click here to enter your code') {
-//             return 'Использовать промокод';
-//         }
+        if ($text === 'Have a coupon? Click here to enter your code') {
+            return 'Введите промокод';
+        }
 
-//         if ($text === 'Add a coupon') {
-//             return 'Использовать промокод';
-//         }
+        if ($text === 'Add a coupon') {
+            return 'Добавить промокод';
+        }
 
-//         if (stripos($text, 'coupon') !== false) {
-//             return 'Использовать промокод';
-//         }
-//     }
+        if (stripos($text, 'coupon') !== false) {
+            return 'Промокод';
+        }
+    }
 
 
-//     return $translated;
-// }
+    return $translated;
+}
 
 
 //**
