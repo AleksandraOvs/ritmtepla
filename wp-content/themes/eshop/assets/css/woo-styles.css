@@ -517,6 +517,10 @@ h2.category-heading:after {
     margin-bottom: 10px;
     font-weight: 400;
     margin-top: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .woocommerce-LoopProduct-link img {
@@ -672,6 +676,10 @@ button.single_add_to_cart_button.button.alt.disabled:hover {
     transform: scale(1.0161);
     background: #000;
     color: #fff;
+}
+
+.wc-block-components-product-metadata__description {
+    display: none;
 }
 
 .wp-singular.product-template-default.woocommerce.woocommerce-page {
