@@ -274,7 +274,7 @@ button.menu-toggle div:not(:first-child) {
     font-size: 14px;
 }
 
-.sub-menu li a::after {
+.mobile-menu ul li a::after {
     content: none;
 }
 
