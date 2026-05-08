@@ -1066,7 +1066,8 @@ body.woocommerce-checkout #page .page-content * {
     padding: 0;
 }
 
-#billing_first_name_field {
+#billing_first_name_field,
+#billing_last_name_field {
     width: calc(50% - 5px);
 }
 
@@ -1515,6 +1516,11 @@ body.woocommerce-checkout #page .page-content * {
 
     .form-row.form-row-last .button {
         font-size: 14px;
+    }
+
+    #billing_first_name_field,
+    #billing_last_name_field {
+        width: calc(50% - 5px);
     }
 
 }
