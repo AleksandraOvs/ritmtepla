@@ -57,6 +57,13 @@ function e_shop_enqueue_styles()
 //     );
 // });
 
+add_action('wp_head', function () {
+?>
+    <link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.ico" type="image/x-icon">
+<?php
+});
+
 if (!function_exists('e_shop_theme_setup')) {
     function e_shop_theme_setup()
     {
