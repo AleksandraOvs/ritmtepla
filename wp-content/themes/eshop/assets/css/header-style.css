@@ -278,6 +278,10 @@ button.menu-toggle div:not(:first-child) {
     content: none;
 }
 
+.header-menu ul li ul li a {
+    font-size: 16px;
+}
+
 @media (max-width: 992px) {
     .site-header-top {
         display: flex;
@@ -307,6 +311,11 @@ button.menu-toggle div:not(:first-child) {
 
     #site-navigation {
         display: none;
+    }
+
+    .mobile-menu ul li ul li a {
+        font-size: 16px;
+        padding-left: 0;
     }
 }
 
