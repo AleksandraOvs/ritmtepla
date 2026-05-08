@@ -65,10 +65,15 @@ header.site-header {
     gap: 1em;
 }
 
+
 .header-contacts a {
     color: var(--theme-color-black);
     text-decoration: underline;
     font-weight: 600;
+}
+
+.header-contacts>a:first-child {
+    margin-right: 20px;
 }
 
 .header-menu__inner .header-menu {
@@ -300,6 +305,10 @@ button.menu-toggle div:not(:first-child) {
 
     .site-header-top__right {
         gap: 30px;
+    }
+
+    .header-contacts>a:first-child {
+        margin-right: 0;
     }
 
 
