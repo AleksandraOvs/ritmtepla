@@ -65,17 +65,18 @@ if (!is_front_page() && !is_checkout()) {
 </div>
 </div>
 <!-- end main container -->
-
-<div class="current-temp"
-    style="position: fixed;
+<?php if (current_user_can('manage_options')) : ?>
+    <div class="current-temp"
+        style="position: fixed;
   background: rgba(255,255,255,.7);
   color: #404040;
   padding: 5px 10px;
   font-size: 10px;
   bottom: 10px;
   right: 10px;">
-    <?php echo get_current_template() ?>
-</div>
+        <?php echo get_current_template() ?>
+    </div>
+<?php endif; ?>
 
 <?php get_template_part('template-parts/toggle-contacts'); ?>
 
