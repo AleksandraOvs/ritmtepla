@@ -174,6 +174,16 @@ add_filter('woocommerce_checkout_fields', function ($fields) {
     return $fields;
 });
 
+add_action('woocommerce_checkout_create_order', function ($order, $data) {
+
+    if (!empty($_POST['billing_full_name'])) {
+        $order->update_meta_data(
+            '_billing_full_name',
+            sanitize_text_field($_POST['billing_full_name'])
+        );
+    }
+}, 10, 2);
+
 
 /**
  * ❗ ВАЖНО: ОТКЛЮЧАЕМ SHIPPING ПРАВИЛЬНО
