@@ -1564,3 +1564,8 @@ body.woocommerce-checkout #page .page-content * {
     font-size: 16px;
     margin-right: 10px;
 }
+
+.wc-block-components-totals-footer-item .wc-block-components-totals-item__label::after {
+    content: ':';
+    margin-left: 2px;
+}
