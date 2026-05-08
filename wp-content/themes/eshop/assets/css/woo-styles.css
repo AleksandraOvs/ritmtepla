@@ -585,6 +585,10 @@ h2.category-heading:after {
     padding: 7px;
     transition: all .3s cubic-bezier(0, 0, 0.5, 1);
     display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 100%;
     border: 1px solid var(--theme-color-black);
 }
 
