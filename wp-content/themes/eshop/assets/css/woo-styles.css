@@ -1559,3 +1559,8 @@ body.woocommerce-checkout #page .page-content * {
 .wc_payment_methods.payment_methods.methods {
     display: none;
 }
+
+.wc-block-components-totals-footer-item .wc-block-components-totals-item__label {
+    font-size: 16px;
+    margin-right: 10px;
+}
