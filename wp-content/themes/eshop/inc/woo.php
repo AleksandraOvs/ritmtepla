@@ -134,7 +134,7 @@ add_filter('woocommerce_checkout_fields', function ($fields) {
 
     /** 📮 Индекс */
     $fields['billing']['billing_postcode']['priority']    = 80;
-    $fields['billing']['billing_postcode']['placeholder'] = 'Индекс*';
+    $fields['billing']['billing_postcode']['placeholder'] = 'Индекс';
     $fields['billing']['billing_postcode']['required']    = false;
 
     /** 🏙 Город */
