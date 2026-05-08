@@ -1066,6 +1066,10 @@ body.woocommerce-checkout #page .page-content * {
     padding: 0;
 }
 
+#billing_first_name_field {
+    width: calc(50% - 5px);
+}
+
 .woocommerce-billing-fields__field-wrapper {
     display: flex;
     gap: 10px;

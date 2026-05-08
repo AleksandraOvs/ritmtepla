@@ -97,21 +97,21 @@ add_filter('woocommerce_checkout_fields', function ($fields) {
 
     // ❌ убираем стандартные WooCommerce поля
     unset(
-        $fields['billing']['billing_first_name'],
-        $fields['billing']['billing_last_name'],
+        //$fields['billing']['billing_first_name'],
+        //$fields['billing']['billing_last_name'],
         $fields['billing']['billing_address_2'],
         $fields['billing']['billing_state'],
         $fields['billing']['billing_country']
     );
 
     /** 📌 ФИО */
-    $fields['billing']['billing_full_name'] = [
-        'type'        => 'text',
-        'priority'    => 10,
-        'class'       => ['form-row-wide'],
-        'placeholder' => 'Ф.И.О*',
-        'required'    => true,
-    ];
+    // $fields['billing']['billing_full_name'] = [
+    //     'type'        => 'text',
+    //     'priority'    => 10,
+    //     'class'       => ['form-row-wide'],
+    //     'placeholder' => 'Ф.И.О*',
+    //     'required'    => true,
+    // ];
 
     /** 📞 Телефон */
     $fields['billing']['billing_phone']['type'] = 'tel';
