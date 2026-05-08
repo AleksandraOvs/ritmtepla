@@ -265,6 +265,19 @@ button.menu-toggle div:not(:first-child) {
     margin-top: 5px;
 }
 
+.menu-item ul.sub-menu {
+    margin-top: 10px;
+}
+
+.sub-menu li a {
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.sub-menu li a::after {
+    content: none;
+}
+
 @media (max-width: 992px) {
     .site-header-top {
         display: flex;
