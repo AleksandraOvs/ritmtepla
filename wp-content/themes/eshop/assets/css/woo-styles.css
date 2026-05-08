@@ -1579,3 +1579,7 @@ body.woocommerce-checkout #page .page-content * {
     content: ':';
     margin-left: 2px;
 }
+
+.woocommerce-order-overview.woocommerce-thankyou-order-details.order_details .woocommerce-order-overview__payment-method {
+    display: none;
+}
