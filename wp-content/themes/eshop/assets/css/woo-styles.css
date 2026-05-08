@@ -540,7 +540,7 @@ h2.category-heading:after {
 }
 
 .swiper.related-products-slider .swiper-wrapper .swiper-slide li .button {
-    margin-top: 20px;
+    margin: 20px auto 0;
 }
 
 /*QTY*/

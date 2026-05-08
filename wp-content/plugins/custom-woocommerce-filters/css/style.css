@@ -621,6 +621,7 @@ Start Sidebar Area Wrapper
         padding: 0;
         gap: 10px;
         margin-bottom: 0;
+        min-height: 50px;
     }
 
     /* .single-sidebar-wrap .sidebar-title {
