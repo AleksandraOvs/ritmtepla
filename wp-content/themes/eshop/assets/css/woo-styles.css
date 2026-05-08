@@ -1520,7 +1520,7 @@ body.woocommerce-checkout #page .page-content * {
 
     #billing_first_name_field,
     #billing_last_name_field {
-        width: calc(50% - 5px);
+        width: 100%;
     }
 
 }
