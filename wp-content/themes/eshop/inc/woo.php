@@ -410,3 +410,7 @@ add_action('wp_footer', function () {
     </script>
 <?php
 });
+
+add_filter('woocommerce_thankyou_order_received_text', function ($text, $order) {
+    return 'Благодарим Вас за заказ. В ближайшее время наш менеджер свяжется с Вами для уточнения деталей доставки.';
+}, 10, 2);
