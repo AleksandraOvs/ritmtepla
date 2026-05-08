@@ -262,3 +262,12 @@ add_filter('woocommerce_sale_flash', function ($html, $post, $product) {
     $new_text = '%'; // <- здесь меняем надпись
     return '<span class="onsale">' . esc_html($new_text) . '</span>';
 }, 10, 3);
+
+add_filter('woocommerce_get_order_address', function ($address, $type, $order) {
+    if (is_admin() === false) {
+        if ($type === 'shipping') {
+            return [];
+        }
+    }
+    return $address;
+}, 10, 3);
