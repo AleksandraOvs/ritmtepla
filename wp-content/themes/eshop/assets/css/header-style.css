@@ -270,7 +270,7 @@ button.menu-toggle div:not(:first-child) {
 }
 
 .sub-menu li a {
-    padding-left: 10px;
+    /* padding-left: 10px; */
     font-size: 14px;
 }
 
@@ -280,6 +280,38 @@ button.menu-toggle div:not(:first-child) {
 
 .header-menu ul li ul li a {
     font-size: 16px;
+}
+
+.menu-item ul.sub-menu li a {
+    padding-bottom: 0;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    align-items: center;
+}
+
+.menu-item ul.sub-menu li a:before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 1px;
+    background: #fff;
+    display: block;
+    transition: all .5s linear;
+}
+
+.menu-item ul.sub-menu li a:hover:before {
+    background: var(--theme-color-accent);
+    filter: drop-shadow(0 0 3px var(--theme-color-accent));
+}
+
+.menu-item ul.sub-menu li a:hover {
+    transform: none;
+}
+
+.header-menu ul li ul li {
+    margin-bottom: 20px;
 }
 
 @media (max-width: 992px) {
