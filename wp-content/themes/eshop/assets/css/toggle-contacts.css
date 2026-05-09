@@ -106,8 +106,9 @@
     overflow: hidden;
     opacity: 0;
     height: 1px;
+    padding: 0 5px;
     transform: translatex(10px);
-    transition: all .5s linear;
+    transition: transform .5s linear;
 }
 
 .toggle-contacts__list__item__link:hover span {
