@@ -175,10 +175,11 @@ ul {
     list-style-position: inside;
 }
 
+/* 
 ol li:not(:first-child),
 ul li:not(:first-child) {
     margin-top: 10px;
-}
+} */
 
 ul {
     padding: 0;
