@@ -168,6 +168,18 @@ a:hover {
     color: var(--theme-color-accent);
 }
 
+ol,
+ul {
+    box-sizing: border-box;
+    padding: 0;
+    list-style-position: inside;
+}
+
+ol li:not(:first-child),
+ul li:not(:first-child) {
+    margin-top: 5px;
+}
+
 ul {
     padding: 0;
     margin: 0;
