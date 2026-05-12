@@ -177,7 +177,7 @@ ul {
 
 ol li:not(:first-child),
 ul li:not(:first-child) {
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 ul {
@@ -188,6 +188,10 @@ ul {
 
 p {
     margin: 0;
+}
+
+.content .container p {
+    margin-bottom: 10px;
 }
 
 p.wp-block-paragraph {
