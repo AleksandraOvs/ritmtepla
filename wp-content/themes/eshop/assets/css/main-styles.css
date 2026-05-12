@@ -395,6 +395,9 @@ footer.footer .container>div {
     list-style: none;
 }
 
+#menu-docs li {
+    margin: 0;
+}
 
 #menu-docs li a {
     text-decoration: underline;
