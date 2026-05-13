@@ -997,6 +997,10 @@ body.woocommerce-checkout #page .page-content * {
     color: var(--theme-color-black);
 }
 
+body.woocommerce-checkout #page .page-content .woocommerce-error * {
+    color: #fff;
+}
+
 .woocommerce-form-coupon-toggle .woocommerce-info {
     background: #fff;
     background: #EBEBEB;
