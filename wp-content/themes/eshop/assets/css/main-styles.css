@@ -287,6 +287,10 @@ figure.wp-block-image img {
     padding-top: 100px;
 }
 
+.page-content .content .container * {
+    line-height: 140%;
+}
+
 h1.post-title {
     font-size: 28px;
     margin-bottom: 1em;
