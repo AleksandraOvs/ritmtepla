@@ -80,6 +80,7 @@ a.button {
     color: var(--theme-color-black);
     font-family: var(--font-body);
     border-radius: 112px;
+    text-decoration: none;
     transition: all .5s linear;
     padding: 10px 25px;
     font-size: 18px;
@@ -160,7 +161,6 @@ a.button:hover {
 
 a {
     color: #fff;
-    text-decoration: none;
     transition: all .5s linear
 }
 
