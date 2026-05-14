@@ -421,6 +421,7 @@ h1.product-title {
     left: 5px;
     right: unset;
     transform: rotate(-7deg);
+    color: #fff !important;
 }
 
 
