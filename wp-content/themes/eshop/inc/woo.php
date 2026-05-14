@@ -437,3 +437,40 @@ add_filter('woocommerce_checkout_fields', function ($fields) {
 
     return $fields;
 });
+
+add_action('wp_footer', function () {
+?>
+    <script>
+        (function() {
+
+            function updateLabel() {
+
+                document.querySelectorAll('.wc-block-components-totals-item').forEach(function(row) {
+
+                    const label = row.querySelector('.wc-block-components-totals-item__label');
+
+                    if (!label) return;
+
+                    if (label.textContent.trim() === 'Скидка') {
+                        label.textContent = 'Скидка по промокоду';
+                    }
+
+                });
+
+            }
+
+            const observer = new MutationObserver(updateLabel);
+
+            observer.observe(document.body, {
+                childList: true,
+                subtree: true
+            });
+
+            document.addEventListener('DOMContentLoaded', function() {
+                setTimeout(updateLabel, 500);
+            });
+
+        })();
+    </script>
+<?php
+});
