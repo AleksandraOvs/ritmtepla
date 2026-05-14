@@ -422,3 +422,18 @@ add_filter('woocommerce_checkout_required_field_notice', function ($message, $fi
 
     return $message;
 }, 10, 2);
+
+add_filter('woocommerce_checkout_fields', function ($fields) {
+
+    // Имя
+    if (isset($fields['billing']['billing_first_name'])) {
+        $fields['billing']['billing_first_name']['placeholder'] = 'Имя *';
+    }
+
+    // Фамилия
+    if (isset($fields['billing']['billing_last_name'])) {
+        $fields['billing']['billing_last_name']['placeholder'] = 'Фамилия *';
+    }
+
+    return $fields;
+});
