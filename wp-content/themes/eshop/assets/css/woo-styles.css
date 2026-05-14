@@ -768,7 +768,7 @@ button.single_add_to_cart_button.button.alt.disabled:hover {
     margin: 0;
     border: none;
     border-radius: 10px;
-    color: #fff;
+    color: #fff !important;
     font-size: 12px;
     line-height: 140%;
 }
@@ -1587,10 +1587,10 @@ body.woocommerce-checkout #page .page-content .woocommerce-error * {
     margin-right: 10px;
 }
 
-.wc-block-components-totals-footer-item .wc-block-components-totals-item__label::after {
+/* .wc-block-components-totals-footer-item .wc-block-components-totals-item__label::after {
     content: ':';
     margin-left: 2px;
-}
+} */
 
 .woocommerce-order-overview.woocommerce-thankyou-order-details.order_details .woocommerce-order-overview__payment-method {
     display: none;
