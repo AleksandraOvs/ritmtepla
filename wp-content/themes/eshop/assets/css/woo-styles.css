@@ -1381,11 +1381,11 @@ body.woocommerce-checkout #page .page-content .woocommerce-error * {
     } */
 
     .woocommerce ul.products li.product .woocommerce-loop-product__title {
-        display: -webkit-box;
+        /* display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         overflow: hidden;
-        padding: 0 !important;
+        padding: 0 !important; */
         margin-bottom: 10px;
     }
 
