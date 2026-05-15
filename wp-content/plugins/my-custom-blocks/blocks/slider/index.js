@@ -26,7 +26,7 @@
                     title: '',
                     url: ''
                 }));
-                setItems(newItems);
+                setItems([...(items || []), ...newItems]);
             };
 
             const replaceImage = (index, img) => {
@@ -53,29 +53,51 @@
             return wp.element.createElement(
                 'div',
                 blockProps,
-                items.length === 0
-                    ? wp.element.createElement(MediaUploadCheck, null,
-                        wp.element.createElement(MediaUpload, {
-                            onSelect: addImages,
-                            allowedTypes: ['image'],
-                            multiple: true,
-                            gallery: true,
-                            value: [],
-                            render: (obj) => wp.element.createElement(Button, { onClick: obj.open, isPrimary: true }, 'Добавить изображения')
-                        })
-                    )
-                    : items.map((item, index) => wp.element.createElement('div', { key: item.id, className: 'slide-editor' },
+
+                // если есть элементы — рисуем их
+                items.length > 0 && items.map((item, index) =>
+                    wp.element.createElement('div', { key: item.id, className: 'slide-editor' },
+
                         wp.element.createElement(MediaUploadCheck, null,
                             wp.element.createElement(MediaUpload, {
                                 onSelect: (img) => replaceImage(index, img),
                                 allowedTypes: ['image'],
                                 value: item.id,
-                                render: (obj) => wp.element.createElement('img', { src: item.img, alt: item.alt, onClick: obj.open, style: { cursor: 'pointer', maxWidth: '100%' } })
+                                render: (obj) =>
+                                    wp.element.createElement('img', {
+                                        src: item.img,
+                                        alt: item.alt,
+                                        onClick: obj.open,
+                                        style: { cursor: 'pointer', maxWidth: '100%' }
+                                    })
                             })
                         ),
-                        index > 0 && wp.element.createElement(Button, { onClick: () => moveItem(index, index - 1) }, '↑'),
-                        index < items.length - 1 && wp.element.createElement(Button, { onClick: () => moveItem(index, index + 1) }, '↓')
-                    ))
+
+                        index > 0 && wp.element.createElement(Button, {
+                            onClick: () => moveItem(index, index - 1)
+                        }, '↑'),
+
+                        index < items.length - 1 && wp.element.createElement(Button, {
+                            onClick: () => moveItem(index, index + 1)
+                        }, '↓')
+                    )
+                ),
+
+                // 👉 КНОПКА ДОБАВЛЕНИЯ ВСЕГДА ВНИЗУ
+                wp.element.createElement(MediaUploadCheck, null,
+                    wp.element.createElement(MediaUpload, {
+                        onSelect: addImages,
+                        allowedTypes: ['image'],
+                        multiple: true,
+                        gallery: true,
+                        render: (obj) =>
+                            wp.element.createElement(
+                                Button,
+                                { onClick: obj.open, isPrimary: true },
+                                items.length ? 'Добавить изображения' : 'Добавить слайды'
+                            )
+                    })
+                )
             );
         },
 

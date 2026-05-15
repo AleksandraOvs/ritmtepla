@@ -4,6 +4,12 @@
     gap: 10px;
 }
 
+.wp-block-my-custom-blocks-slider>button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
 /* 
 .pics-slide-editor {
     overflow: hidden;
