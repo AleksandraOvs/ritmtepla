@@ -433,7 +433,7 @@ h1.product-title {
     padding: .5em 0;
     margin: 0;
     font-size: 1em;
-    min-height: 54px;
+    min-height: 73px;
 }
 
 .woocommerce ul.products li.product a.woocommerce-loop-product__link:hover {
