@@ -1385,7 +1385,7 @@ body.woocommerce-checkout #page .page-content .woocommerce-error * {
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
         overflow: hidden;
-        min-height: unset;
+        min-height: 51px;
         padding: 0 !important;
         margin-bottom: 10px;
     }
