@@ -802,6 +802,12 @@ button.single_add_to_cart_button.button.alt.disabled:hover {
     opacity: 1;
     display: inline-block;
     font-weight: 400;
+    opacity: .5;
+}
+
+.woocommerce div.product p.price del span bdi,
+.woocommerce div.product span.price del span bdi {
+    font-size: 20px;
 }
 
 /*CROSS PRODUCTS*/
