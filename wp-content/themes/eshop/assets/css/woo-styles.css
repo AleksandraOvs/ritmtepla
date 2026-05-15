@@ -428,6 +428,14 @@ h1.product-title {
     transition: transform .3s cubic-bezier(0, 0, 0.5, 1);
 }
 
+.woocommerce ul.products li.product .woocommerce-loop-product__title,
+.woocommerce ul.products li.product h3 {
+    padding: .5em 0;
+    margin: 0;
+    font-size: 1em;
+    min-height: 54px;
+}
+
 .woocommerce ul.products li.product a.woocommerce-loop-product__link:hover {
     transform: scale(1.0161);
 }
