@@ -797,6 +797,13 @@ button.single_add_to_cart_button.button.alt.disabled:hover {
     margin-top: 10px;
 }
 
+.woocommerce div.product p.price del,
+.woocommerce div.product span.price del {
+    opacity: 1;
+    display: inline-block;
+    font-weight: 400;
+}
+
 /*CROSS PRODUCTS*/
 
 .single-product__cross-sells {
