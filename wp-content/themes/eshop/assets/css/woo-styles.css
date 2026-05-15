@@ -1461,6 +1461,11 @@ body.woocommerce-checkout #page .page-content .woocommerce-error * {
         margin-bottom: 1em;
     }
 
+    .woocommerce span.onsale {
+        font-size: 20px;
+    }
+
+
     /* .category-item__link {
         padding: 5px 10px;
         border: none;
