@@ -1428,7 +1428,8 @@ body.woocommerce-checkout #page .page-content .woocommerce-error * {
 
     .site-main .product.sale span.onsale {
         top: 8px;
-        left: 5px;
+        left: unset;
+        right: 10px;
     }
 }
 
